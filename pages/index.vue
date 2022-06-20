@@ -1,6 +1,7 @@
 <template>
   <div>
-    <Header :config="config" />
+    {{ config }}
+    <!-- <Header :config="config" /> -->
     <TheHero />
     <Footer />
   </div>
@@ -8,7 +9,7 @@
 
 <script>
 export default {
-  data: (vm) => ({
+  data: () => ({
     config: {
       siteName: "サイト名",
     },
