@@ -1,18 +1,11 @@
-<template>
-  <div>
-    {{ config }}
-    <!-- <Header :config="config" /> -->
-    <TheHero />
-    <Footer />
-  </div>
-</template>
-
-<script>
-export default {
-  data: () => ({
-    config: {
-      siteName: "サイト名",
-    },
-  }),
-};
+<script setup>
+definePageMeta({
+  layout: "uru",
+});
 </script>
+
+<template>
+  <NuxtLayout name="uru">
+    <TheHero />
+  </NuxtLayout>
+</template>
