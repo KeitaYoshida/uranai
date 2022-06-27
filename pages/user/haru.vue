@@ -10,12 +10,12 @@ const color = useTextColor();
       <img
         class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
         alt="hero"
-        src="/img/top-image.png"
+        src="/img/haru.png"
       />
 
       <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
         <h1 class="title-font sm:text-xl text-xl mb-4 font-bold" :class="color">
-          春タイプ　「あなたの仕事のモチベーション基準は環境重視型です
+          春タイプ　「あなたの仕事のモチベーション基準は環境重視型です」
         </h1>
         <div class="py-8 leading-relaxed">
           <strong>どういう時に成長しやすいか？</strong>
@@ -35,6 +35,7 @@ const color = useTextColor();
           <br /><br />
           なので、いきなり就職をするのではなく社内の人から話を聞くなど会社の雰囲気が自分に合っているのかを確認して選択してください。
         </div>
+        <all-user />
       </div>
     </div>
   </NuxtLayout>
