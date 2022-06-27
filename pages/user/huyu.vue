@@ -10,7 +10,7 @@ const color = useTextColor();
       <img
         class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
         alt="hero"
-        src="/img/huyu.png"
+        src="/img/top-mage-huyu.png"
       />
 
       <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
@@ -42,8 +42,8 @@ const color = useTextColor();
           <br />
           なので、いきなり就職をするのではなくその職場は自分が得たい知識や経験、学びがあるのかを確認して選択してください。
         </div>
+        <all-user />
       </div>
-      <all-user />
     </div>
   </NuxtLayout>
 </template>

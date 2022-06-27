@@ -10,7 +10,7 @@ const color = useTextColor();
       <img
         class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
         alt="hero"
-        src="/img/natsu.png"
+        src="/img/top-mage-natsu.png"
       />
 
       <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
