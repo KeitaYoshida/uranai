@@ -4,8 +4,6 @@ import { useRouter } from "vue-router";
 
 const router = useRouter();
 const mainText = useMainText();
-const discriptionText = useDiscription();
-const discriptionTextLg = useDiscriptionLg();
 const color = useTextColor();
 const asks = useAsks();
 const startDate = useStart();
@@ -62,15 +60,27 @@ function submit(event) {
         src="/img/top-mage.png"
       />
 
-      <div class="w-full md:w-2/3 flex flex-col mb-16 items-center text-center">
+      <div class="w-4/5 md:w-1/2 flex flex-col mb-16 items-center text-center">
         <h1 class="title-font sm:text-xl text-xl mb-4 font-bold" :class="color">
           {{ mainText }}
         </h1>
-        <div class="py-8 leading-relaxed md:hidden">
-          <pre>{{ discriptionText }}</pre>
-        </div>
-        <div class="py-8 leading-relaxed hidden md:block">
-          <pre>{{ discriptionTextLg }}</pre>
+        <div class="py-8">
+          <div class="py-4">
+            <strong>１分でわかる無料のオリジナル自己分析診断</strong>
+          </div>
+          <div class="py-4">
+            生年月日と５つの質問であなたの人生や仕事におけるモチベーション基準がわかります
+          </div>
+          <div class="py-4">
+            自分がより仕事で成長し続けるためには何を大切にすれば良いのかが明確にわかり、より良い人生を選択するための道しるべにもなります
+          </div>
+          <div class="py-4">
+            <strong>仕事に対するモチベーションの種類は大きく分けて４つ</strong>
+          </div>
+          <div class="py-4">
+            季節の春タイプ、夏タイプ、秋タイプ、冬タイプです。あなたはどの季節タイプなのか今すぐチェックしてみよう！
+          </div>
+          <div class="py-4">自分の知らない新しい価値観に気づけるかも</div>
         </div>
         <form
           action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe0lkm7iZPV6jHkL1veLOIDb_kRETBuQ7CVEVnGhHk12rsUZw/formResponse"
@@ -95,7 +105,7 @@ function submit(event) {
           <div
             v-for="(ask, index) in asks"
             :key="index"
-            class="relative w-4/5 md:w-1/2 text-left mb-3 mx-auto"
+            class="text-left mb-3 mx-auto"
           >
             <p class="text-left">{{ ask.text }}</p>
             <div class="flex text-sm justify-end mb-3">
