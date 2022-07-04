@@ -147,7 +147,7 @@ function submit(event) {
               :disabled="!allSelect"
               type="submit"
             >
-              決定
+              自分を知る
             </button>
           </div>
         </form>
