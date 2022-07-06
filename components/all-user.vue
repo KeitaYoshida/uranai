@@ -29,9 +29,6 @@
     <div class="py-4">
       <strong>あなたの成長を私たちは本気で考えます！</strong>
     </div>
-    <div class="py-4">
-      （キャリアプランナーは１００％あなたの成長を一番に考えるため転職紹介や副業商材を販売することは一切ありません）
-    </div>
 
     <div class="relative w-4/5 md:w-1/2 text-left mb-3 mx-auto">
       <button
