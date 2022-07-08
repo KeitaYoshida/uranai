@@ -29,7 +29,7 @@
     <div class="py-4">
       <strong>あなたの成長を私たちは本気で考えます！</strong>
     </div>
-
+    <div class="py-4">※求人や副業を紹介するサービスではありません</div>
     <div class="relative w-4/5 md:w-1/2 text-left mb-3 mx-auto">
       <button
         class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg w-full text-center justify-center disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none"
