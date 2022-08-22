@@ -10,8 +10,112 @@ const startDate = useStart();
 const shiki = useShiki();
 const data = reactive({
   date: "2000-01-01",
+  year: 1987,
+  month: 1,
+  day: 1,
   checks: [undefined, undefined, undefined, undefined, undefined],
 });
+const monthes = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+const days = [
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10",
+  "11",
+  "12",
+  "13",
+  "14",
+  "15",
+  "16",
+  "17",
+  "18",
+  "19",
+  "20",
+  "21",
+  "22",
+  "23",
+  "24",
+  "25",
+  "26",
+  "27",
+  "28",
+  "29",
+  "30",
+  "31",
+];
+const years = [
+  "1950",
+  "1951",
+  "1952",
+  "1953",
+  "1954",
+  "1955",
+  "1956",
+  "1957",
+  "1958",
+  "1959",
+  "1960",
+  "1961",
+  "1962",
+  "1963",
+  "1964",
+  "1965",
+  "1966",
+  "1967",
+  "1968",
+  "1969",
+  "1970",
+  "1971",
+  "1972",
+  "1973",
+  "1974",
+  "1975",
+  "1976",
+  "1977",
+  "1978",
+  "1979",
+  "1980",
+  "1981",
+  "1982",
+  "1983",
+  "1984",
+  "1985",
+  "1986",
+  "1987",
+  "1988",
+  "1989",
+  "1990",
+  "1991",
+  "1992",
+  "1993",
+  "1994",
+  "1995",
+  "1996",
+  "1997",
+  "1998",
+  "1999",
+  "2000",
+  "2001",
+  "2002",
+  "2003",
+  "2004",
+  "2005",
+  "2006",
+  "2007",
+  "2008",
+  "2009",
+  "2010",
+  "2011",
+  "2012",
+  "2013",
+  "2014",
+];
 const mergeDay = computed(() => {
   const st = dayjs(startDate.value);
   const tar = dayjs(data.date);
@@ -30,6 +134,10 @@ const allSelect = computed(() => {
   });
   return flg;
 });
+function upDate() {
+  const z = (num) => ("00" + num).slice(-2);
+  data.date = `${data.year}-${z(data.month)}-${z(data.day)}`;
+}
 function submit(event) {
   const form = document.getElementById("googlForm");
   const formData = new FormData(form);
@@ -40,17 +148,11 @@ function submit(event) {
   };
   fetch(action, options);
   router.push("/user/" + getShiki.value.text);
-  // const formData = new FormData(form);
-  // const action = form.getAttribute("action");
-  // const options = {
-  //   method: "POST",
-  //   body: formData,
-  // };
 }
 </script>
 
 <template>
-  <section class="text-gray-600 body-font">
+  <section class="text-gray-600 body-font" id="main-text">
     <div
       class="container mx-auto flex flex-col px-5 py-5 justify-center items-center"
     >
@@ -98,8 +200,102 @@ function submit(event) {
                 id="hero-field"
                 name="entry.537808769"
                 v-model="data.date"
+                hidden
                 class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-indigo-200 focus:bg-transparent border border-gray-300 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               />
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-state"
+              >
+                year
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-transparent border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state"
+                  v-model="data.year"
+                  @change="upDate()"
+                >
+                  <option v-for="(item, index) in years" :key="index">
+                    {{ item }}
+                  </option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    class="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-state"
+              >
+                month
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-transparent border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state"
+                  v-model="data.month"
+                  @change="upDate()"
+                >
+                  <option v-for="(item, index) in monthes" :key="index">
+                    {{ item }}
+                  </option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    class="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-state"
+              >
+                day
+              </label>
+              <div class="relative">
+                <select
+                  class="block appearance-none w-full bg-transparent border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-state"
+                  v-model="data.day"
+                  @change="upDate()"
+                >
+                  <option v-for="(item, index) in days" :key="index">
+                    {{ item }}
+                  </option>
+                </select>
+                <div
+                  class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+                >
+                  <svg
+                    class="fill-current h-4 w-4"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
+                    />
+                  </svg>
+                </div>
+              </div>
             </div>
           </div>
           <div
@@ -155,3 +351,16 @@ function submit(event) {
     </div>
   </section>
 </template>
+
+<style scoped>
+#main-text {
+  background: url("/img/main-back-2.png");
+  background-size: 400px 400px;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+</style>

@@ -3,14 +3,14 @@ const color = useTextColor();
 </script>
 
 <template>
-  <NuxtLayout name="uru">
+  <NuxtLayout name="huyu">
     <div
-      class="container mx-auto flex flex-col px-5 py-5 justify-center items-center"
+      class="container mx-auto flex flex-col px-5 py-5 justify-center items-center com-back in-main"
     >
       <img
-        class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded"
+        class="lg:w-2/6 md:w-3/6 w-5/6 mb-10 object-cover object-center rounded com-top-img"
         alt="hero"
-        src="/img/top-mage-huyu.png"
+        src="/img/top-huyu.gif"
       />
 
       <div class="w-4/5 md:w-1/2 flex flex-col mb-16 items-center text-center">
@@ -49,3 +49,14 @@ const color = useTextColor();
     </div>
   </NuxtLayout>
 </template>
+
+<style scoped>
+.com-top-img {
+  width: 7rem !important;
+  height: 7rem !important;
+  margin-bottom: 4rem;
+}
+.in-main {
+  background: rgba(255, 255, 255, 0.6);
+}
+</style>

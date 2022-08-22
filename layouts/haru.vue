@@ -8,5 +8,8 @@
 
 <style scoped>
 .main {
+  background: url("/img/back-haru.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 </style>
