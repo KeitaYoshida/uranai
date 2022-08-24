@@ -7,9 +7,25 @@
 </template>
 
 <style scoped>
-.main {
-  background: url("/img/back-natsu.jpg");
-  background-size: cover;
-  background-attachment: fixed;
+@media (min-width: 601px) {
+  .main {
+    background: url("/img/back-natsu.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 600px) {
+  .main:before {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    background: url("/img/back-natsu.jpg") center no-repeat;
+    background-size: cover;
+  }
 }
 </style>
